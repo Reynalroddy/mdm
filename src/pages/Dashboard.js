@@ -73,8 +73,9 @@ const Dashboard = () => {
     );
   return (
     <>
-    <div className="grid">
-                    <div className="col-12 lg:col-6 xl:col-3">
+    <div className='col-12'>
+<div className='grid'>
+<div className="col-12 lg:col-6 xl:col-3">
                         <div className="surface-card shadow-2 p-3 border-1 border-50 border-round">
                             <div className="flex justify-content-between mb-3">
                                 <div>
@@ -130,15 +131,20 @@ const Dashboard = () => {
                            
                         </div>
                     </div>
+</div>
+    </div>
+            
 
+<div className='col-12'>
 
-                    <div className="col-12 lg:col-6 xl:col-4">
-                <div className="surface-card shadow-2 border-round p-4">
+<div className='grid'>
+<div className="col-12 lg:col-6 xl:col-4">
+                <div className="surface-card shadow-2 lg:p-3 border-round text-center">
                     <div className="flex align-items-center justify-content-between mb-3">
-                        <div className="text-900 font-medium text-xl">COMPLIANCE AND MANAGEMENT</div>
+                        <div className="text-900 font-medium text-l">COMPLIANCE AND MANAGEMENT</div>
                        
                     </div>
-                    <div style={{ width: 300, height: 300 }}>
+                    <div  className='dash-spin' style={{ width: 200, height: 200 }}>
 
                   
                     <CircularProgressbar
@@ -154,38 +160,42 @@ const Dashboard = () => {
                   />
                </div>
                 </div>
-            </div>
+            </div> 
 
            
 
-            <div className="col-12 lg:col-6 xl:col-4">
-                <div className="surface-card shadow-2 border-round p-4">
+             <div className="col-12 lg:col-6 xl:col-4">
+                <div className="surface-card shadow-2 lg:p-2 border-round text-center">
                     <div className="flex align-items-center justify-content-between mb-3">
-                        <div className="text-900 font-medium text-xl">DEVICE CATEGORY</div>
+                        <div className="text-900 font-medium text-l">DEVICE CATEGORY</div>
                        
                     </div>
                    
-                    <Chart style={{  width: '80%' }} type="doughnut" data={doughnutData} />
+                    <Chart style={{  width: '70%' }} type="doughnut" data={doughnutData} />
                  
                 </div>
             </div>
 
          
-  <div className="col-12 lg:col-12 xl:col-4">
-                <div className="surface-card border-round shadow-2 p-4 text-center">
+   <div className="col-12 lg:col-12 xl:col-4">
+                <div className="surface-card border-round shadow-2 lg:p-1  text-center">
                     <img src={svg}  width={150} height={150} alt="security" className="mx-auto block mb-4" />
-                    <div className="text-900 font-medium mb-3 text-xl">Customer Satisfaction</div>
+                    <div className="text-900 font-medium mb-3 text-l">CUSTOMER SATISFACTION</div>
                     <p className="mt-0 mb-4 p-0 line-height-3">Our Device management system has the ability to track, lock and reset devices – essential to be able to discharge its good governance requirements as an organisation using public money.</p>
-                    {/* <Button label="Learn More" icon="pi pi-arrow-right p-button-rounded" /> */}
+                   
                 </div>
-            </div>
+            </div> 
+</div>
+</div>
+             
            
-    
-  <div className="col-12 lg:col-12 xl:col-12">
-                <div className="surface-card border-round shadow-2 p-4 text-center">
+      <div className='col-12'>
+        <div className='grid'>
+        <div className="col-12 lg:col-12 xl:col-12">
+                <div className="surface-card border-round shadow-2  text-center">
                 <DataTable value={products} 
                     loading={loading1}
-                     responsiveLayout="stick"
+                     responsiveLayout="stack"
                      paginator
                      paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
                      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}" rows={10} rowsPerPageOptions={[5,10,50]}
@@ -195,13 +205,36 @@ const Dashboard = () => {
                         <Column field="id" header="Device Id"></Column>
                             <Column field="name" header="Device Name"></Column>
                             <Column field="phone_number" header="Phone_number"></Column>
-                            <Column field="imei" header="Device IMEI"></Column>
+                            <Column field="serial_number" header="S/N"></Column>
+                           
                             
                     </DataTable>
                 </div>
             </div> 
+        </div>
+   
+    </div>  
+   {/* <div className="col-12 lg:col-12 xl:col-12">
+                <div className="surface-card border-round shadow-2 p-4 text-center">
+                <DataTable value={products} 
+                    loading={loading1}
+                     responsiveLayout="stack"
+                     paginator
+                     paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+                     currentPageReportTemplate="Showing {first} to {last} of {totalRecords}" rows={10} rowsPerPageOptions={[5,10,50]}
+                  
+                        header={header}>
+                       
+                        <Column field="id" header="Device Id"></Column>
+                            <Column field="name" header="Device Name"></Column>
+                            <Column field="phone_number" header="Phone_number"></Column>
+                           
+                            
+                    </DataTable>
+                </div>
+            </div>   */}
 
-            {/* <div className="col-12 lg:col-12">
+             {/* <div className="col-12 lg:col-12">
                 <div className="card card-w-title global-sales p-fluid">
                         <h5>Latest Registered Sims.</h5>
                         <DataTable value={products} paginator  paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"  rows={5}  loading={loading1} className="p-datatable-products">
@@ -214,8 +247,7 @@ const Dashboard = () => {
                            
                         </DataTable>
                     </div>
-                </div> */}
-</div>      
+                </div>  */}
 </>
              
   )

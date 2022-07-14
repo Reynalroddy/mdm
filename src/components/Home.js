@@ -166,7 +166,10 @@ const Home = () => {
         </div>
         <div className="p-5 flex flex-column flex-auto">
             <div className=" surface-section flex-auto p-5">
-           <Outlet />
+                <div className='grid'>
+                <Outlet />
+                </div>
+          
             </div>
         </div>
     </div>

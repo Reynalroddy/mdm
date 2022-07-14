@@ -32,3 +32,10 @@ body {
 a{
     text-decoration: none;
 }
+
+@media only screen and (min-width: 600px) {
+    .dash-spin {
+      width: 300;
+      height: 300;
+    }
+  }

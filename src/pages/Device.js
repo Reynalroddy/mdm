@@ -42,8 +42,10 @@ VIEW DEVICE
 
 
   return (
-   <div className='grid'>
+  
  <div className="col-12">
+     <div className='grid'>
+     <div className="col-12 lg:col-12">
                 <div className="card border-round shadow-2 ">
                 <div className="mb-3 flex align-items-center justify-content-between p-3">
         <span className="text-xl font-medium text-900">All Devices</span>
@@ -52,8 +54,8 @@ VIEW DEVICE
              <DataTable value={products} 
                   
                     loading={loading1}
-                     responsiveLayout="stick"
-                    scrollable
+                     responsiveLayout="stack"
+                  
                      paginator
                      paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
                      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}" rows={5} rowsPerPageOptions={[5,10,50]}
@@ -64,7 +66,7 @@ VIEW DEVICE
                         <Column field="id" header="Device Id"></Column>
                             <Column field="name" header="Device Name"></Column>
                             <Column field="phone_number" header="Phone_number"></Column>
-                            <Column field="imei" header="Device IMEI"></Column>
+                            {/* <Column field="imei" header="Device IMEI"></Column> */}
                         <Column field="id" header="Action" body={statusBodyTemplate2} />
                     </DataTable>
                 </div>
@@ -76,7 +78,7 @@ VIEW DEVICE
                      <img src={qr} alt={'qr-code'} width="100%" className="mt-0 mx-auto mb-5 block shadow-2" />
 
                     </Dialog>
-</div> 
+</div> </div>
   )
 }
 

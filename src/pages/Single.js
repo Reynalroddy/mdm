@@ -78,7 +78,9 @@ const obj = statz.data.results.find((it)=>it.id===id);
 return   <ProgressSpinner/>
     }
   return (
-   
+   <div className='col-12'>
+<div className='grid'>
+<div className='col-12'>
 <div className="surface-card p-4 shadow-2 border-round">
     <div className="font-medium text-3xl text-900 mb-3">Device {product?.name}</div>
     <div className="text-500 mb-5">{product?.serial_number},{product?.manufacturer}.</div>
@@ -153,6 +155,10 @@ return   <ProgressSpinner/>
     </ul>
     <Toast ref={toast} position="top-center" />
 </div>
+</div>
+</div>
+   </div>
+
     
   )
 }
